@@ -6,12 +6,17 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import org.springframework.beans.factory.annotation.Value;
 
 public class DatabaseWorker {
 
     String url = "jdbc:postgresql://localhost:5432/web_lab4";
     String user_name = "postgres";
     String password = "8574";
+    @Value("${spring.datasource.password}")
+    String p;
+    @Value("${my.datasource.user}")
+    String m;
 
     public Connection getConnectionToDataBase() {
         Connection connection = null;

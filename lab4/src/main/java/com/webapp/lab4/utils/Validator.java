@@ -23,9 +23,9 @@ public class Validator {
             System.out.println("Invalid data");
             return condition;
         }
-        if (x < 2 && x > -2) {
-            if (y < 5 && y > -3) {
-                if (r < 2 && r > -2) {
+        if (x <= 2 && x >= -2) {
+            if (y <= 5 && y >= -3) {
+                if (r <= 2 && r >= -2) {
                     condition = true;
                 }
             }
